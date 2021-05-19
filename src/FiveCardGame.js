@@ -49,7 +49,7 @@ const FiveCardGame = (CardGame) => {
                 // Game mechanic: Give the players random cards
                 this.Players.forEach(player => {
                     if (CardGame.Debug) CardGame.DebugPass(`(${_gameType}) Player, ${player.Name}, drawing ${CardGame.PlayerHandCount} cards.`);
-                    player.Hand = this.CardDeck.draw(5);
+                    player.Hand = this.CardDeck.draw(CardGame.PlayerHandCount);
                 });
 
                 resolve();
